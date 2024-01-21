@@ -1,0 +1,247 @@
+[gd_scene load_steps=3 format=3 uid="uid://f8vhogv6clxr"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_qxfra"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_alt64"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -300.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qxfra")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+offset_right = 600.0
+offset_bottom = 500.0
+color = Color(0.431373, 0.431373, 0.431373, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_right = 600.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Row1" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+label_settings = SubResource("LabelSettings_alt64")
+horizontal_alignment = 1
+
+[node name="MakeProduct" type="Button" parent="MarginContainer/VBoxContainer/Row1"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Make Product
+"
+
+[node name="BuySupply" type="Button" parent="MarginContainer/VBoxContainer/Row1"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Buy Supply
+"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+text = "
+"
+label_settings = SubResource("LabelSettings_alt64")
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Row5" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Row5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+text = "Buy Supply = $10 ; 1000 Units of Supply
+Product Sale = $1"
+label_settings = SubResource("LabelSettings_alt64")
+
+[node name="HSeparator4" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Row2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ProductMade" type="LineEdit" parent="MarginContainer/VBoxContainer/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+text = "0"
+alignment = 2
+editable = false
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "# Made
+"
+label_settings = SubResource("LabelSettings_alt64")
+horizontal_alignment = 1
+
+[node name="Row3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Money" type="LineEdit" parent="MarginContainer/VBoxContainer/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+text = "$10"
+alignment = 2
+editable = false
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "$$$$$$
+"
+label_settings = SubResource("LabelSettings_alt64")
+horizontal_alignment = 1
+
+[node name="Row4" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Supply" type="LineEdit" parent="MarginContainer/VBoxContainer/Row4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+text = "0"
+alignment = 2
+editable = false
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Row4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Supply
+"
+label_settings = SubResource("LabelSettings_alt64")
+horizontal_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Row90" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BuyAutoMake" type="Button" parent="MarginContainer/VBoxContainer/Row90"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "$100"
+
+[node name="Auto10" type="Button" parent="MarginContainer/VBoxContainer/Row90"]
+layout_mode = 2
+disabled = true
+text = "x10"
+
+[node name="Auto100" type="Button" parent="MarginContainer/VBoxContainer/Row90"]
+layout_mode = 2
+disabled = true
+text = "x100"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Row90"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Buy AutoMaker
+"
+label_settings = SubResource("LabelSettings_alt64")
+horizontal_alignment = 1
+
+[node name="AutoOwned" type="LineEdit" parent="MarginContainer/VBoxContainer/Row90"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+text = "0"
+alignment = 2
+editable = false
+
+[node name="Row91" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BuyAutoSupply" type="Button" parent="MarginContainer/VBoxContainer/Row91"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "$10,000"
+
+[node name="Sup10" type="Button" parent="MarginContainer/VBoxContainer/Row91"]
+layout_mode = 2
+disabled = true
+text = "x10"
+
+[node name="Sup100" type="Button" parent="MarginContainer/VBoxContainer/Row91"]
+layout_mode = 2
+disabled = true
+text = "x100"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Row91"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Buy AutoSupply
+"
+label_settings = SubResource("LabelSettings_alt64")
+horizontal_alignment = 1
+
+[node name="AutoSupplyOwned" type="LineEdit" parent="MarginContainer/VBoxContainer/Row91"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+text = "0"
+alignment = 2
+editable = false
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 5.0
+offset_right = 595.0
+offset_bottom = 40.0
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Row1/MakeProduct" to="." method="_on_make_product_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Row1/BuySupply" to="." method="_on_buy_supply_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Row90/BuyAutoMake" to="." method="_on_buy_auto_make_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Row90/Auto10" to="." method="_on_auto_10_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Row90/Auto100" to="." method="_on_auto_100_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Row91/BuyAutoSupply" to="." method="_on_buy_auto_supply_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Row91/Sup10" to="." method="_on_sup_10_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Row91/Sup100" to="." method="_on_sup_100_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
